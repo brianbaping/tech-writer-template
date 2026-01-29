@@ -104,6 +104,21 @@ cp CLAUDE.template.md CLAUDE.md
 
 **See [HOW-TO-USE.md](HOW-TO-USE.md) for complete workflows and examples.**
 
+### Working with Existing Documents?
+
+If you have a folder of source documents (meeting notes, specs, research) that need to be transformed into a white paper:
+
+📘 **[EXAMPLE-USAGE.md](EXAMPLE-USAGE.md)** - Complete workflow for turning source documents into professional white papers
+
+**Quick preview:**
+```
+1. Point Claude at your source-docs/ folder
+2. Generate outline from existing content
+3. Draft sections using your documents
+4. Validate and review
+5. Professional white paper ready!
+```
+
 ---
 
 ## 📁 Architecture Overview
@@ -142,6 +157,7 @@ tech-writer-template/
 
 - **[SETUP.md](SETUP.md)** - Detailed installation and customization guide
 - **[HOW-TO-USE.md](HOW-TO-USE.md)** - Complete workflows with examples
+- **[EXAMPLE-USAGE.md](EXAMPLE-USAGE.md)** - Transform existing documents into white papers
 - **[CLAUDE.template.md](CLAUDE.template.md)** - Voice descriptor template
 
 ---
