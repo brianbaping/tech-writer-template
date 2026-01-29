@@ -1,0 +1,47 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:code.claude.com)",
+      "WebFetch(domain:support.claude.com)",
+      "WebFetch(domain:dev.to)",
+      "WebFetch(domain:www.anthropic.com)",
+      "WebFetch(domain:claude.com)",
+      "WebFetch(domain:claudelog.com)",
+      "WebFetch(domain:www.producttalk.org)",
+      "WebFetch(domain:mikhail.io)",
+      "WebFetch(domain:leehanchung.github.io)",
+      "WebFetch(domain:www.richsnapp.com)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:www.youngleaders.tech)",
+      "Bash(chmod:*)",
+      "Bash(tree:*)"
+    ],
+    "deny": [],
+    "ask": []
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": ".claude/hooks/validate-citation-format.sh"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "WebFetch",
+        "hooks": [
+          {
+            "type": "command",
+            "command": ".claude/hooks/track-bibliography.sh"
+          }
+        ]
+      }
+    ]
+  }
+}
