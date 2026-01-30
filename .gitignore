@@ -41,6 +41,17 @@ Thumbs.db
 !.claude/hooks/*
 !.claude/settings.local.json
 
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Generated visualization files (examples/tests)
+fig-*.png
+test-*.png
+*-diagram.png
+*-chart.png
+
 # Keep documentation
 !README.md
 !SETUP.md

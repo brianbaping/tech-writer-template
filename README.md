@@ -13,7 +13,7 @@
 
 A production-ready Claude Code architecture that streamlines every phase of white paper development:
 
-- **4 Skills** - Automatic invocation for outlines, citations, abstracts, and drafts
+- **5 Skills** - Automatic invocation for outlines, citations, abstracts, drafts, and visualizations
 - **3 Agents** - Autonomous research, citation validation, and technical review
 - **2 Automation Hooks** - Real-time citation validation and bibliography tracking
 - **Complete Voice Control** - Customizable style guidelines shared across all components
@@ -28,10 +28,11 @@ A production-ready Claude Code architecture that streamlines every phase of whit
 
 | Skill | Purpose | Invocation |
 |-------|---------|------------|
-| `/outline` | Generate structured white paper outlines | Automatic or `/outline [topic]` |
-| `/citations` | Format citations (IEEE/APA/Chicago) | `/citations [style] [source]` |
-| `/abstract` | Write executive summaries | `/abstract [file]` |
-| `/draft-section` | Expand outlines into prose | `/draft-section [section]` |
+| `outline` | Generate structured white paper outlines | Automatic when outlining |
+| `citations` | Format citations (IEEE/APA/Chicago) | Automatic when citing sources |
+| `abstract` | Write executive summaries | Automatic for summaries |
+| `draft-section` | Expand outlines into prose | Automatic when drafting |
+| `visualizations` | Create diagrams, charts, and technical illustrations | Automatic when visuals needed |
 
 ### 🚀 Autonomous Agents
 
@@ -45,6 +46,15 @@ A production-ready Claude Code architecture that streamlines every phase of whit
 
 - **Citation Validation Hook** - Warns about placeholder citations and format issues
 - **Bibliography Tracking Hook** - Automatically logs all web sources for easy citation
+
+### 📊 Professional Visualizations
+
+- **Architecture Diagrams** - Component relationships and system structures
+- **Workflow Diagrams** - Process flows and decision trees
+- **Data Charts** - Bar charts, line graphs, pie charts, heatmaps
+- **Integration Patterns** - System integrations and parallel processing
+- **Automatic Generation** - Creates diagrams from descriptions
+- **High Quality** - 300 DPI for print-ready documents
 
 ### 🎨 Customizable
 
@@ -71,6 +81,9 @@ cd tech-writer-template
 
 # Make hooks executable
 chmod +x .claude/hooks/*.sh
+
+# Install visualization dependencies (for diagrams/charts)
+sudo apt-get install -y graphviz python3-graphviz python3-matplotlib python3-numpy
 
 # Customize for your project
 cp CLAUDE.template.md CLAUDE.md
@@ -131,11 +144,12 @@ tech-writer-template/
 ├── README.md                  # This file
 │
 └── .claude/
-    ├── skills/                # 4 skills for writing tasks
+    ├── skills/                # 5 skills for writing tasks
     │   ├── outline/
     │   ├── citations/
     │   ├── abstract/
-    │   └── draft-section/
+    │   ├── draft-section/
+    │   └── visualizations/    # NEW: Professional diagrams & charts
     │
     ├── agents/                # 3 agents for complex workflows
     │   ├── academic-researcher.md
@@ -255,9 +269,10 @@ tech-writer-template/
 Contributions welcome! Areas for improvement:
 
 - Additional citation styles (MLA, Vancouver, etc.)
-- More specialized agents (code validator, diagram generator)
+- More specialized agents (code validator, data analyzer)
 - Integration with reference managers (Zotero, Mendeley)
 - Additional output formats (LaTeX, Markdown variants)
+- More diagram types (UML, sequence diagrams, network diagrams)
 
 Please open an issue or pull request.
 

@@ -48,11 +48,12 @@ your-project/
 ├── README.md                   # Quick reference
 │
 └── .claude/
-    ├── skills/                 # 4 skills installed
+    ├── skills/                 # 5 skills installed
     │   ├── outline/
     │   ├── citations/
     │   ├── abstract/
-    │   └── draft-section/
+    │   ├── draft-section/
+    │   └── visualizations/     # Professional diagrams & charts
     │
     ├── agents/                 # 3 agents configured
     │   ├── academic-researcher.md
@@ -68,13 +69,32 @@ your-project/
     └── settings.local.json     # Configuration
 ```
 
-### Step 3: Verify Hooks are Executable
+### Step 3: Install Visualization Dependencies
+
+For the visualizations skill to work, install these system packages:
+
+```bash
+# Ubuntu/Debian/WSL
+sudo apt-get update
+sudo apt-get install -y graphviz python3-graphviz python3-matplotlib python3-numpy
+
+# macOS
+brew install graphviz
+pip3 install graphviz matplotlib numpy
+
+# Verify installation
+python3 -c "import graphviz; import matplotlib; import numpy; print('✅ Visualization libraries installed!')"
+```
+
+**Note:** If you don't plan to use diagrams/charts in your white papers, you can skip this step.
+
+### Step 4: Verify Hooks are Executable
 
 ```bash
 chmod +x .claude/hooks/*.sh
 ```
 
-### Step 4: Customize CLAUDE.md
+### Step 5: Customize CLAUDE.md
 
 **This is the most important step!** Edit `CLAUDE.md` to match your project:
 
@@ -123,7 +143,7 @@ Adjust the tone descriptions:
 - Add project-specific requirements
 - Remove items that don't apply
 
-### Step 5: Test the Setup
+### Step 6: Test the Setup
 
 Verify everything works:
 
