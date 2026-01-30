@@ -48,21 +48,25 @@ your-project/
 ├── README.md                   # Quick reference
 │
 └── .claude/
-    ├── skills/                 # 5 skills installed
+    ├── skills/                 # 8 skills installed
     │   ├── outline/
     │   ├── citations/
     │   ├── abstract/
     │   ├── draft-section/
-    │   └── visualizations/     # Professional diagrams & charts
+    │   ├── visualizations/     # Professional diagrams & charts
+    │   ├── tables/             # Professional tables
+    │   └── bibliography/       # References formatting
     │
-    ├── agents/                 # 3 agents configured
+    ├── agents/                 # 4 agents configured
     │   ├── academic-researcher.md
     │   ├── citation-validator.md
-    │   └── technical-reviewer.md
+    │   ├── technical-reviewer.md
+    │   └── proofreading-agent/ # Grammar & style checking
     │
-    ├── hooks/                  # 2 automation scripts
+    ├── hooks/                  # 3 automation scripts
     │   ├── validate-citation-format.sh
-    │   └── track-bibliography.sh
+    │   ├── track-bibliography.sh
+    │   └── track-word-count.sh # Word count tracking
     │
     ├── cache/                  # Empty directory (files generated during use)
     │
@@ -297,9 +301,9 @@ fi
 After setup, verify:
 
 - [ ] `.claude/` directory exists with all subdirectories
-- [ ] 4 skills present in `.claude/skills/`
-- [ ] 3 agents present in `.claude/agents/`
-- [ ] 2 hooks present and executable in `.claude/hooks/`
+- [ ] 8 skills present in `.claude/skills/`
+- [ ] 4 agents present in `.claude/agents/`
+- [ ] 3 hooks present and executable in `.claude/hooks/`
 - [ ] `CLAUDE.md` exists and is customized for your project
 - [ ] `HOW-TO-USE.md` and `README.md` are present
 - [ ] `.claude/cache/` directory exists (may be empty)

@@ -13,9 +13,9 @@
 
 A production-ready Claude Code architecture that streamlines every phase of white paper development:
 
-- **5 Skills** - Automatic invocation for outlines, citations, abstracts, drafts, and visualizations
-- **3 Agents** - Autonomous research, citation validation, and technical review
-- **2 Automation Hooks** - Real-time citation validation and bibliography tracking
+- **8 Skills** - Automatic invocation for outlines, citations, abstracts, drafts, visualizations, tables, and bibliographies
+- **4 Agents** - Autonomous research, citation validation, technical review, and proofreading
+- **3 Automation Hooks** - Real-time citation validation, bibliography tracking, and word count monitoring
 - **Complete Voice Control** - Customizable style guidelines shared across all components
 
 **Perfect for:** Technical writers, developer advocates, researchers, and anyone writing professional technical documentation.
@@ -33,6 +33,8 @@ A production-ready Claude Code architecture that streamlines every phase of whit
 | `abstract` | Write executive summaries | Automatic for summaries |
 | `draft-section` | Expand outlines into prose | Automatic when drafting |
 | `visualizations` | Create diagrams, charts, and technical illustrations | Automatic when visuals needed |
+| `tables` | Generate professional tables and comparison matrices | Automatic when tabular data needed |
+| `bibliography` | Format References/Bibliography sections | Automatic when generating references |
 
 ### 🚀 Autonomous Agents
 
@@ -41,11 +43,13 @@ A production-ready Claude Code architecture that streamlines every phase of whit
 | `@academic-researcher` | Haiku | Parallel literature review & source gathering |
 | `@citation-validator` | Sonnet | Verify citation completeness & format |
 | `@technical-reviewer` | Opus | Comprehensive technical quality review |
+| `@proofreading-agent` | Haiku | Grammar, spelling, punctuation, and style checking |
 
 ### ⚡ Automation
 
 - **Citation Validation Hook** - Warns about placeholder citations and format issues
 - **Bibliography Tracking Hook** - Automatically logs all web sources for easy citation
+- **Word Count Tracker Hook** - Real-time word count, progress tracking, and section-level statistics
 
 ### 📊 Professional Visualizations
 
@@ -144,21 +148,25 @@ tech-writer-template/
 ├── README.md                  # This file
 │
 └── .claude/
-    ├── skills/                # 5 skills for writing tasks
+    ├── skills/                # 8 skills for writing tasks
     │   ├── outline/
     │   ├── citations/
     │   ├── abstract/
     │   ├── draft-section/
-    │   └── visualizations/    # NEW: Professional diagrams & charts
+    │   ├── visualizations/    # Professional diagrams & charts
+    │   ├── tables/            # NEW: Professional tables
+    │   └── bibliography/      # NEW: References/Bibliography formatting
     │
-    ├── agents/                # 3 agents for complex workflows
+    ├── agents/                # 4 agents for complex workflows
     │   ├── academic-researcher.md
     │   ├── citation-validator.md
-    │   └── technical-reviewer.md
+    │   ├── technical-reviewer.md
+    │   └── proofreading-agent/ # NEW: Grammar & style checking
     │
-    ├── hooks/                 # 2 automation scripts
+    ├── hooks/                 # 3 automation scripts
     │   ├── validate-citation-format.sh
-    │   └── track-bibliography.sh
+    │   ├── track-bibliography.sh
+    │   └── track-word-count.sh # NEW: Word count tracking
     │
     ├── cache/                 # Generated reports (created during use)
     │

@@ -45,6 +45,15 @@
             "command": ".claude/hooks/track-bibliography.sh"
           }
         ]
+      },
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": ".claude/hooks/track-word-count.sh"
+          }
+        ]
       }
     ]
   }
