@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: tech-writer-template
+  description: "Template agents, skills and hooks for a technical writer"
+  annotations:
+    github.com/project-slug: brianbaping/tech-writer-template
+spec:
+  type: library
+  lifecycle: experimental
+  owner: user:default/brianbaping
